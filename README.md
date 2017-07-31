@@ -1,6 +1,6 @@
 # Use case
 
-Read the famous internal topic `__consumer_offsets` with any projects that can only read JSON topics.
+Read the famous internal topic `__consumer_offsets` with any projects that can only read JSON topics, such as timeseries databases, to enable some monitoring and alerting.
 
 # How to run it
 
