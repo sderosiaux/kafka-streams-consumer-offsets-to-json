@@ -31,6 +31,10 @@ $ kafka-console-consumer.bat --topic __consumer_offsets_json --new-consumer --bo
 
 The output topic offsets are not published to not cause an infinite loop (listening to it would cause messages published to this same topic, that would move on the offsets, that would cause new messages to pop etc.).
 
+# Warning
+
+It's probably not a good idea to rely on this in production, because it's an implementation detail that can changed across versions.
+
 # Options
 
 The broker address and the output topic can be customized.
