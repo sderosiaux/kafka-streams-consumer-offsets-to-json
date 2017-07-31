@@ -24,10 +24,10 @@ object KStreamBuilder {
     KeyValue.pair(GroupMetadataManager.readMessageKey(ByteBuffer.wrap(k)), v)
 
   val offsetKey: KeyValueMapper[BaseKey, Array[Byte], KeyValue[OffsetKey, Array[Byte]]] = (key: BaseKey, value: Array[Byte]) =>
-    KeyValue.pair(key.asInstanceOf[OffsetKey], value)
+    KeyValue.pair(key.asInstanceOf[OffsetKey], value) // would love a collect() in the Java API :(
 
   val otherTopicsOnly: String => Predicate[BaseKey, Array[Byte]] = (outputTopic: String) => (key: BaseKey, _: Array[Byte]) => key match {
-    // we ignore out own topic where we write otherwise we'll cause an infinite loop if we listen to it
+    // we ignore our own topic where we write otherwise we'll cause an infinite loop if we listen to it
     case k: OffsetKey => k.key.topicPartition.topic() != outputTopic
     case _ => false
   }
