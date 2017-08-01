@@ -6,6 +6,8 @@ Read the famous internal topic `__consumer_offsets` with any projects that can o
 
 Clone the project, and `sbt run`, or via Intellij IDEA, run the `Main` class.
 
+You can also build it using `sbt universal:packageBin` and unzip `target\universal\kafka-consumer-offsets-to-json-topic-1.0.zip`.
+
 # Dependencies
 
 It only depends on Kafka Streams 0.11 (it can be setup to 0.10 if needed).
