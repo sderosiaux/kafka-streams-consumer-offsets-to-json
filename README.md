@@ -2,7 +2,7 @@
 
 Read the famous internal topic `__consumer_offsets` with any projects that can only read JSON topics, such as timeseries databases, to enable some monitoring and alerting.
 
-Details on the blog post: https://www.ctheu.com/2017/08/07/looking-at-kafka-s-consumers-offsets/
+Details on the blog post: https://www.sderosiaux.com/articles/2017/08/07/looking-at-kafka-s-consumers-offsets
 
 # How to run it
 
